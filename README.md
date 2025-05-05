@@ -8,26 +8,29 @@ It applies statistical analysis to extract insights from the data.
 ## Statistical Measures Covered
 The following statistical methods are implemented and analyzed in this notebook:
 
-Measures of Central Tendency*
+1. Measures of Central Tendency*
 
-Mean
-Median
-Mode
-Measures of Dispersion
+- Mean
+- Median
+- Mode
 
-Variance
-Standard Deviation
-Range
-Interquartile Range (IQR)
-Correlation Analysis
+2. Measures of Dispersion
 
-Pearson Correlation
-Spearman Correlation
-Kendall Correlation
-Other Descriptive Statistics
+- Variance
+- Standard Deviation
+- Range
+- Interquartile Range (IQR)
 
-Skewness
-Kurtosis
+3. Correlation Analysis
+
+- Pearson Correlation
+- Spearman Correlation
+- Kendall Correlation
+
+4. Other Descriptive Statistics
+
+- Skewness
+- Kurtosis
 # Assignment 2 - EDA and Preprocessing
 ## Overview
 The main objective of this project is to design and implement a robust data preprocessing system that tackles common data challenges such as:
@@ -37,23 +40,23 @@ Missing values Outliers Inconsistent formatting
 By performing effective preprocessing and EDA, we aim to enhance the dataset’s quality and prepare it for machine learning algorithms.
 
 ## EDA and Preprocessing Steps Done are :
-Data Exploration
+1. Data Exploration
 
 Listed unique values and length of each column. Statistical summary of numerical features. Renamed columns for consistency and readability.
 
-Data Cleaning
+2. Data Cleaning
 
 Identified and treated missing and inappropriate values. Replaced age = 0 with NaN. Filled NaN with median (numeric) or mode (categorical). Removed duplicates. Detected outliers using IQR.
 
-Data Analysis
+3. Data Analysis
 
 Filtered records where age > 40 and salary < 5000. Plotted scatter plot of Age vs Salary. Counted individuals by location and visualized with bar chart.
 
-Data Encoding
+4. Data Encoding
 
 Applied Label Encoding for binary categorical columns. Applied One-Hot Encoding for multiclass categorical columns.
 
-Feature Scaling
+5. Feature Scaling
 
 Applied StandardScaler and MinMaxScaler on numeric features for ML readiness.
 
@@ -62,9 +65,9 @@ Applied StandardScaler and MinMaxScaler on numeric features for ML readiness.
 This project explores various regression techniques in supervised machine learning using the California Housing dataset. The goal is to predict median house values based on features like income, location, and population.
 
 ## Processing Steps
-Loading and Preprocessing Loaded dataset using fetch_california_housing(). Converted data to a pandas DataFrame.Checked for missing values (none found).Scaled features using StandardScaler(important for SVR and Linear Regression) Split data into 80% training and 20% testing usingtrain_test_split`.
+1. Loading and Preprocessing Loaded dataset using fetch_california_housing(). Converted data to a pandas DataFrame.Checked for missing values (none found).Scaled features using StandardScaler(important for SVR and Linear Regression) Split data into 80% training and 20% testing usingtrain_test_split`.
 
-Models Implemented
+2. Models Implemented
 
 Model	Description
 LinearRegression	Fits a linear model to the data
@@ -72,14 +75,14 @@ DecisionTreeRegressor	Tree-based model that splits data on feature thresholds
 RandomForestRegressor	Ensemble of multiple decision trees (bagging)
 GradientBoostingRegressor	Builds trees sequentially to correct errors
 SVR (Support Vector Regressor)	Attempts to fit a regression within a margin; sensitive to feature scaling
-Evaluation Metrics
+3. Evaluation Metrics
 
 Each model was evaluated using:
 
   Mean Squared Error (MSE)
   Mean Absolute Error (MAE)
   R² Score (coefficient of determination)
-Model Comparison Results
+4. Model Comparison Results
 
 Model	MSE	MAE	R² Score
 Random Forest Regressor	lowest	lowest	highest
@@ -129,10 +132,10 @@ This Jupyter Notebook explores unsupervised learning using KMeans clustering on 
   * Elbow Method: 
        - Used to determine the optimal number of clusters (`k`) by plotting Within-Cluster-Sum-of-Squares (WCSS).
 ## Highlights
-Clear explanation of how KMeans works.
-Practical demonstration using real-world structured data.
-Visualizations of clustering results (e.g. scatter plots).
-Use of the Elbow Method to justify choice of k.
+- Clear explanation of how KMeans works.
+- Practical demonstration using real-world structured data.
+- Visualizations of clustering results (e.g. scatter plots).
+- Use of the Elbow Method to justify choice of k.
 # Module End Assignment : Car Price Prediction
 ## Overview :
 This project is developed for analyzing car price dynamics in the US market using machine learning. It is designed for a Chinese automobile company entering the US market and aims to help management understand which factors significantly impact car pricing.
@@ -141,32 +144,32 @@ This project is developed for analyzing car price dynamics in the US market usin
 To model car prices using regression techniques and identify which features most affect price — enabling better business and design strategies for the US market.
 
 ## Steps Performed
-Data Preprocessing
+1. Data Preprocessing
 
-Cleaned and corrected car brand names
-Converted categorical features to numerical using one-hot encoding
-Scaled features using StandardScaler
-Model Training
+- Cleaned and corrected car brand names
+- Converted categorical features to numerical using one-hot encoding
+- Scaled features using StandardScaler
+2. Model Training
 
-Trained 5 regression models:
-Linear Regression
-Decision Tree Regressor
-Random Forest Regressor
-Gradient Boosting Regressor
-Support Vector Regressor (SVR)
-Model Evaluation
+- Trained 5 regression models:
+  - Linear Regression
+  - Decision Tree Regressor
+  - Random Forest Regressor
+  - Gradient Boosting Regressor
+  - Support Vector Regressor (SVR)
+3. Model Evaluation
 
-Compared using:
-R² Score
-Mean Squared Error (MSE)
-Mean Absolute Error (MAE)
-Visualized predicted vs actual prices
-Feature Importance
+- Compared using:
+  - R² Score
+  - Mean Squared Error (MSE)
+  - Mean Absolute Error (MAE)
+- Visualized predicted vs actual prices
+4. Feature Importance
 
-Extracted top contributing features using Random Forest
-Hyperparameter Tuning
+- Extracted top contributing features using Random Forest
+5. Hyperparameter Tuning
 
-Performed grid search on Random Forest to improve performance
+- Performed grid search on Random Forest to improve performance
 ## Key Metrics
-Best Model: Random Forest Regressor (after tuning)
-Top Features: Engine size, horsepower, curb weight, car width, brand
+- Best Model: Random Forest Regressor (after tuning)
+- Top Features: Engine size, horsepower, curb weight, car width, brand
